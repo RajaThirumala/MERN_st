@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Modern Example</title>
+  <style>
+    body {
+      background-color: lightyellow;
+      font-family: Arial, sans-serif;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+      color: blue;
+      font-weight: bold;
+    }
+    p {
+      text-align: right;
+    }
+    .underline {
+      text-decoration: underline;
+    }
+    .strike {
+      text-decoration: line-through;
+    }
+    .scroll {
+      display: inline-block;
+      white-space: nowrap;
+      animation: scroll-left 5s linear infinite;
+    }
+    @keyframes scroll-left {
+      from { transform: translateX(100%); }
+      to { transform: translateX(-100%); }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>This is a title using modern CSS</h1>
+
+  <p>
+    <span class="underline">Underlined text</span> and 
+    <span class="strike">strikethrough</span> (modern)
+  </p>
+
+  <div class="scroll">Scrolling text (modern with CSS)</div>
+
+</body>
+</html>

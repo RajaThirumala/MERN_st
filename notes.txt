@@ -1,0 +1,3 @@
+Hyperlink: A hyperlink is a reference to another resource(by clicking this hyperlink we can redirect to another page)
+http methods-> get,post,put,delete,patch
+form input methods:text,password,button,checkbox,radio
