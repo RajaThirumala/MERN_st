@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Personal Details Form</title>
+</head>
+<body bgcolor="#00ff00">
+
+<center>
+<h2><font color="red">Personal Details</font></h2>
+
+<form>
+
+  Name: <input type="text" name="name"><br><br>
+  Password: <input type="password" name="password"><br><br>
+  E-mail id: <input type="email" name="email"><br><br>
+  
+  Gender:
+  <input type="radio" name="gender" value="male" style="background-color: grey;"> Male
+  <input type="radio" name="gender" value="female" style="background-color: grey;"> Female<br><br>
+  
+  Contact#: <input type="tel" name="contact"><br><br>
+
+  <h2><font color="red">Educational Qualification</font></h2>
+
+  Degree: 
+  <select name="qualification">
+    <option value="">--Select Group--</option>
+    <option value="bsc">BSc</option>
+    <option value="bcom">BCom</option>
+    <option value="ba">BTech</option>
+  </select><br><br>
+
+  Engineering:
+  <select name="engineering">
+    <option value="">--Select Group--</option>
+    <option value="cse">CSE</option>
+    <option value="ece">ECE</option>
+    <option value="mech">Mechanical</option>
+  </select><br><br>
+
+  Hobbies:
+  <input type="checkbox" name="hobbies" value="chess" style="background-color: grey;"> Playing Chess
+  <input type="checkbox" name="hobbies" value="reading" style="background-color: grey;"> Reading Books<br><br>
+
+  <h2><font color="red">Address</font></h2>
+
+  <textarea name="address" rows="4" cols="40"></textarea><br><br>
+
+  Attach Resume: <input type="file" name="resume"><br><br>
+
+  <input type="submit" value="Submit" style="background-color: orange; color: white; border: none; padding: 6px 12px;">
+
+</form>
+</center>
+
+</body>
+</html>
