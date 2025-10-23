@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>News Page Header</title>
+<style>
+  body {
+    height: 1000px;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+  }
+
+.fixed1 {
+position: fixed;
+top: 20px;
+left: 20px;
+width: 120px;
+}
+
+.fixed2 {
+position: fixed;
+top: 20px;
+right: 20px;
+width: 120px;
+}
+
+.unfixed1 {
+display: block;
+margin: 40px auto 0 auto;
+width: 800px;
+}
+
+.news-header {
+margin-top: 50px;
+display: flex;
+align-items: center;
+justify-content: center;
+width: 90%;
+max-width: 1200px;
+margin-left: auto;
+margin-right: auto;
+padding: 10px 20px;
+background-color: #ffffff;
+border-radius: 8px;
+box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+gap: 30px;
+}
+
+.left-group {
+display: flex;
+align-items: center;
+gap: 10px;
+}
+
+.search-icon {
+width: 40px;
+height: 40px;
+cursor: pointer;
+}
+
+.news-info {
+font-size: 14px;
+font-weight: bold;
+white-space: nowrap;
+}
+
+.right-group {
+display: flex;
+align-items: center;
+gap: 8px;
+}
+
+.news-logo-text {
+font-family: 'Georgia', serif;
+font-size: 22px;
+font-weight: 700;
+color: #000000;
+letter-spacing: 1px;
+white-space: nowrap;
+}
+
+.news-logo-pic, .user-pic {
+width: 40px;
+height: 40px;
+border-radius: 50%;
+object-fit: cover;
+}
+
+/* News Section */
+.news-container {
+display: flex;
+justify-content: space-between;
+width: 90%;
+max-width: 1200px;
+margin: 60px auto;
+gap: 40px;
+}
+
+.important-news {
+flex: 1;
+background-color: #fff;
+padding: 20px;
+border-radius: 8px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.important-news h2 {
+color: #d9534f;
+margin-bottom: 10px;
+}
+
+.important-news p {
+font-size: 15px;
+line-height: 1.6;
+}
+
+.other-news {
+flex: 2;
+display: flex;
+flex-direction: column;
+gap: 20px;
+}
+
+.news-card {
+display: flex;
+align-items: center;
+background: #fff;
+border-radius: 8px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+overflow: hidden;
+}
+
+.news-card img {
+width: 180px;
+height: 120px;
+object-fit: cover;
+}
+
+.news-content {
+padding: 15px;
+}
+
+.news-content h3 {
+margin: 0;
+font-size: 18px;
+color: #333;
+}
+
+.news-content p {
+margin-top: 8px;
+font-size: 14px;
+color: #555;
+} </style>
+
+</head>
+<body>
+
+  <img src="NewsArticefigure1.png" alt="Fixed Left" class="fixed1">
+  <img src="NewsArticefigure1.png" alt="Fixed Right" class="fixed2">
+
+  <img src="NewsArticlefigure2.png" alt="Main Article" class="unfixed1">
+
+  <div class="news-header">
+    <div class="left-group">
+      <img src="search_logo.png" alt="Search" class="search-icon">
+      <div class="news-info" id="news-info"></div>
+    </div>
+
+<div class="right-group">
+  <div class="news-logo-text">Globe News</div>
+  <img src="logo_assignment.png" alt="Logo" class="news-logo-pic">
+  <img src="NewsArticlefigure3logo.png" alt="User" class="user-pic">
+</div>
+
+  </div>
+
+  <!-- News Section -->
+
+  <div class="news-container">
+    <!-- Left Important News -->
+    <div class="important-news">
+      <h2>Breaking News</h2>
+      <p><strong>India Launches Gaganyaan Mission:</strong> ISRO successfully launched its first human space mission from Sriharikota, marking a historic milestone in India's space journey.</p>
+      <p><strong>Global Markets Rally:</strong> Stock markets see a major rebound as tech and renewable sectors surge amid strong quarterly results.</p>
+    </div>
+
+<!-- Right News with Images -->
+<div class="other-news">
+  <div class="news-card">
+    <img src="News1.jpg" alt="Sports News">
+    <div class="news-content">
+      <h3>India Clinches T20 Series Win</h3>
+      <p>Team India defeated Australia 3-2 in an exciting T20 series, with Suryakumar Yadav leading the way.</p>
+    </div>
+  </div>
+
+  <div class="news-card">
+    <img src="News2.jpg" alt="Tech News">
+    <div class="news-content">
+      <h3>AI Revolution in Healthcare</h3>
+      <p>AI startups are transforming early diagnosis and treatment planning, making healthcare more efficient than ever.</p>
+    </div>
+  </div>
+
+  <div class="news-card">
+    <img src="News3.jpg" alt="Environment">
+    <div class="news-content">
+      <h3>Green Energy Growth in India</h3>
+      <p>Government announces new solar energy projects across multiple states to accelerate renewable energy adoption.</p>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  <script>
+    function updateNewsInfo() {
+      const infoEl = document.getElementById("news-info");
+      const now = new Date();
+      const options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
+      const dateStr = now.toLocaleDateString('en-IN', options);
+      const temperature = "30°C";
+      infoEl.innerHTML = `${dateStr} | Hyderabad | ${temperature}`;
+    }
+    updateNewsInfo();
+  </script>
+
+</body>
+</html>
